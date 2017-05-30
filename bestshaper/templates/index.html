@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div>index</div>
+
+    <a href="{% url 'login:sign_up' %}">sign_up</a><br>
+    <a href="{% url 'login:sign_in' %}">sign_in</a><br>
+
+{% endblock %}
