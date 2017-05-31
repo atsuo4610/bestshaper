@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect
 from rest_framework import viewsets, filters
 
 from .forms import LoginForm
-from .models import User
 
 from .models import User, Brassiere
 from .serializer import UserSerializer, BrassiereSerializer
