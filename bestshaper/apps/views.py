@@ -27,7 +27,7 @@ def sign_up(request):
         form = LoginForm(request.POST)  # POST データの束縛フォーム
         if form.is_valid():  # バリデーションを通った
             User.objects.create(**form.cleaned_data)
-            return redirect('login:sign_up_done')  # POST 後のリダイレクト
+            return redirect('apps:sign_up_done')  # POST 後のリダイレクト
     else:
         form = LoginForm()  # 非束縛フォーム
         d = {
