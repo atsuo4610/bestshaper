@@ -41,5 +41,10 @@ def sign_up_done(request):
 def sign_in(request):
     return render(request, 'sign_in.html')
 
+def bra_admin(request):
+    bra = User.objects.get()
+    return render(request, 'bra_admin.html')
+
+
 
 
