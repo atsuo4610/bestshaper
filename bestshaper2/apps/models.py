@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework import serializers
 
 
 class User(models.Model):
@@ -7,16 +8,23 @@ class User(models.Model):
     password = models.CharField(max_length=10)
     mail = models.EmailField
 
+
 class Brassiere(models.Model):
     bra_name = models.CharField(max_length=32)
     wash_num = models.IntegerField()
 
-#受け取ったデータでデータベースを更新する処理
+
+class BrassiereData(serializers.ModelSerializer):
+    class Meta:
+        model = Brassiere
+        fields = ('bra_name', 'bra_started_at', 'wash_num', 'user')
+
+
 # def put_wash_num(models.Model):
 #     b = Brassiere.objects.get(pk='1')
 #     serializedData =
-#
-#
+
+
 
 
 # class Entry(models.Model):

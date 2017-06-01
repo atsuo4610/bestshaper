@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from . import views
+from . import views, api
 
 # from rest_framework import routers
 from .views import UserViewSet, BrassiereViewSet
@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^sign_up_done/$', views.sign_up_done, name='sign_up_done'),
     url(r'^sign_in/$', views.sign_in, name='sign_in'),
     url(r'^bra_admin/$', views.bra_admin, name='bra_admin'),
+    url(r'^api/hoge$', api.post_wash_num, name='post_wash'),
 
     #ブラジャーごとの情報の書き込み
     # url(r'^bra_admin/$', views.bra_admin, name='bra_admin'),
