@@ -10,6 +10,9 @@ urlpatterns = [
     url(r'^sign_up_done/$', views.sign_up_done, name='sign_up_done'),
     url(r'^sign_in/$', views.sign_in, name='sign_in'),
     url(r'^bra_admin/$', views.bra_admin, name='bra_admin'),
+
+    #ブラジャーごとの情報の書き込み
+    # url(r'^bra_admin/$', views.bra_admin, name='bra_admin'),
     # url(r'^api/bra_data$', views.bra_data, name='bra_admin'),
 
 ]
