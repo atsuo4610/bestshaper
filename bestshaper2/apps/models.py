@@ -17,7 +17,7 @@ class Brassiere(models.Model):
 class BrassiereData(serializers.ModelSerializer):
     class Meta:
         model = Brassiere
-        fields = ('bra_name', 'bra_started_at', 'wash_num', 'user')
+        fields = ('bra_name','wash_num')
 
 
 # def put_wash_num(models.Model):
