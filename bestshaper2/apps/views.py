@@ -43,12 +43,23 @@ def sign_up_done(request):
 def sign_in(request):
     return render(request, 'sign_in.html')
 
+
+
 def bra_admin(request):
     all_bra = Brassiere.objects.all()
     d = {
         'bra' : all_bra,
     }
     return render(request, 'bra_admin.html', d)
+
+
+def bra_admin_detail(request, bra_id):
+    all_bra = Brassiere.objects.get(pk=bra_id)
+    d = {
+        'bra' : all_bra,
+    }
+    return render(request, 'bra_admin_detail.html', d)
+
 
 #APIから受け取ったデータをBrassiereテーブルを更新する
 #
